@@ -37,10 +37,27 @@
 
   function decide_action(eve) {
     console.log(eve)
+    if eve.key === "s"{
+      show()
+    }
+    
+    if eve.key === "t"{
+      tell()
+    }
+      
+      if eve.key === "b"{
+      both()
+      }
   }
 
   function show() {
-
+    for (let i = 0; i < 1000; i++) {
+    if (Math.random() > 0.5) {
+      document.body.innerText += '／'
+    } else {
+      document.body.innerText += '＼'
+    }
+  }
   }
 
   function tell() {
