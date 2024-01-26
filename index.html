@@ -1,7 +1,7 @@
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
 
-  h1 {
+  div {
     background-color: #002966;
     color: #ffffff;
     font-size: 80px;
@@ -21,43 +21,24 @@
   }
 </style>
 
-<h1>
-
-  teach me [T]<br>
+<div>teach me [T]<br>
   show me [S]<br>
   why not both? [B]<br>
-  <br style="line-height: 35px" />
-
-</h1>
+  <br style="line-height: 35px" /></div>>
 
 <body>
 </body>
 
 <script>
-
-  function decide_action(eve) {
-    console.log(eve)
-    if eve.key === "s"{
-      show()
-    }
-    
-    if eve.key === "t"{
-      tell()
-    }
-      
-      if eve.key === "b"{
-      both()
-      }
-  }
-
+  
   function show() {
     for (let i = 0; i < 1000; i++) {
-    if (Math.random() > 0.5) {
-      document.body.innerText += '／'
-    } else {
-      document.body.innerText += '＼'
+      if (Math.random() > 0.5) {
+        document.body.innerText += '／'
+      } else {
+        document.body.innerText += '＼'
+      }
     }
-  }
   }
 
   function tell() {
@@ -67,6 +48,23 @@
   function both() {
 
   }
-  
+
+  function decide_action(eve) {
+    
+    console.log(eve)
+    if (eve.key === "s") {
+      show()
+    }
+
+    if (eve.key === "t") {
+      tell()
+    }
+
+    if (eve.key === "b") {
+      both()
+    }
+  }
+
+
   document.addEventListener("keyup", decide_action)
 </script>
