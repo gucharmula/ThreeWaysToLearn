@@ -15,7 +15,8 @@
 </body>
 
 <script>
-  function show():
+  
+  function show(){
     for (let i = 0; i < 1000; i++) {
         if (Math.random() > 0.5) {
           document.body.innerText += '／'
@@ -23,5 +24,6 @@
           document.body.innerText += '＼'
         }
       }
-  show()
+  }
+  document.body.addEventListener(s, show())
 </script>
