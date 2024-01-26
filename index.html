@@ -39,14 +39,9 @@
 </body>
 
 <script>
-  function listen() {
-
-    document.addEventListener(keyup, decide_action())
-
-  }
 
   function decide_action(eve) {
-    print(eve)
+    console.log(eve)
   }
 
   function show() {
@@ -60,4 +55,6 @@
   function both() {
 
   }
+  
+  document.addEventListener(keyup, decide_action)
 </script>
