@@ -1,70 +1,45 @@
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
 
-  div {
-    background-color: #002966;
-    color: #ffffff;
-    font-size: 80px;
-    line-height: 120px;
-    word-wrap: anywhere;
-    font-family: "Noto Serif SC";
-    text-align: center;
-  }
-
   body {
     background-color: #0082c8;
     color: #ffffff;
     font-size: 30px;
     line-height: 30px;
     word-wrap: anywhere;
-    font-family: "Noto Serif SC";
-  }
+    font-family: "Noto Serif SC";}
 </style>
-
-<div>teach me [T]<br>
-  show me [S]<br>
-  why not both? [B]<br>
-  <br style="line-height: 35px"></div>>
 
 <body>
 </body>
 
 <script>
   
+  function home() {
+    document.body.innerText = "teach me [T]\n\n show me [S]\n\n why not both? [B]\n\n"}
+  
   function show() {
+    document.body.innerText = "take me back [←]\n\n"
     for (let i = 0; i < 1000; i++) {
       if (Math.random() > 0.5) {
-        document.body.innerText += '／'
-      } else {
-        document.body.innerText += '＼'
-      }
-    }
-  }
+        document.body.innerText += '／'} 
+      else {
+        document.body.innerText += '＼'}}}
 
-  function tell() {
+  function tell() {}
 
-  }
-
-  function both() {
-
-  }
+  function both() {}
 
   function decide_action(eve) {
-    
-    console.log(eve)
     if (eve.key === "s") {
-      show()
-    }
-
+      show()}
     if (eve.key === "t") {
-      tell()
-    }
-
+      tell()}
     if (eve.key === "b") {
-      both()
-    }
-  }
+      both()}
+    if (eve.key === "Backspace") {
+      home()}}
 
-
+  home()
   document.addEventListener("keyup", decide_action)
 </script>
