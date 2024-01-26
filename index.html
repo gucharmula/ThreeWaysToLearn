@@ -11,6 +11,7 @@
 </style>
 
 <body>
+  <embed src="ThreeWaysToLearn/textbook.pdf" width="500" height="375">
 </body>
 
 <script>
@@ -20,7 +21,7 @@
   
   function show() {
     document.body.innerText = "take me back [←]\n\n"
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 1998; i++) {
       if (Math.random() > 0.5) {
         document.body.innerText += '／'} 
       else {
@@ -40,6 +41,6 @@
     if (eve.key === "Backspace") {
       home()}}
 
-  home()
+  //home()
   document.addEventListener("keyup", decide_action)
 </script>
