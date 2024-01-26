@@ -1,6 +1,16 @@
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
-  
+
+  h1 {
+    background-color: #002966;
+    color: #ffffff;
+    font-size: 80px;
+    line-height: 120px;
+    word-wrap: anywhere;
+    font-family: "Noto Serif SC";
+    text-align: center;
+  }
+
   body {
     background-color: #0082c8;
     color: #ffffff;
@@ -11,19 +21,43 @@
   }
 </style>
 
+<h1>
+
+  teach me [T]<br>
+  show me [S]<br>
+  why not both? [B]<br>
+  <br style="line-height: 35px" />
+
+</h1>
+
 <body>
+
+
+
+
+
 </body>
 
 <script>
-  
-  function show(){
-    for (let i = 0; i < 1000; i++) {
-        if (Math.random() > 0.5) {
-          document.body.innerText += '／'
-        } else {
-          document.body.innerText += '＼'
-        }
-      }
+  function listen() {
+
+    document.addEventListener(keyup, decide_action())
+
   }
-  document.body.addEventListener(s, show())
+
+  function decide_action(eve) {
+    print(eve)
+  }
+
+  function show() {
+
+  }
+
+  function tell() {
+
+  }
+
+  function both() {
+
+  }
 </script>
