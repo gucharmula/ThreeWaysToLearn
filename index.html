@@ -43,20 +43,20 @@
   }
 
   function both() {
-    
-    
-    document.body.innerText = "take me back [←]\n\n\n\n\n"
-        const letters = content.split('')
-      
+
+
+    document.body.innerText = "take me back [←]\n\n\n\n"
+    const letters = content.split('')
+
     for (let i = 0; i < letters.length; i += 10) {
       if (Math.random() > 0.5) {
         nn.create('span')
           .content(letters.slice(i, i + 10).join(""))
           .css({
-                  
-          'transform': 'rotate(45deg)',
-          'display': 'inline-block'
-          
+
+            'transform': 'rotate(45deg)',
+            'display': 'inline-block'
+
 
           })
           .addTo('body')
@@ -65,7 +65,7 @@
           .content(letters.slice(i, i + 10).join(""))
           .css({
             'transform': 'rotate(-45deg)',
-          'display': 'inline-block'
+            'display': 'inline-block'
           })
           .addTo('body')
 
