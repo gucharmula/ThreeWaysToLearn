@@ -11,8 +11,7 @@
 </style>
 
 <body>
-  <embed src="ThreeWaysToLearn/textbook.pdf" width="500" height="375">
-  <embed src="ThreeWaysToLearn/text.txt" width="500" height="375">
+  <input type="file" name="inputfile" id="inputfile">
 </body>
 
 <script>
@@ -29,8 +28,14 @@
         document.body.innerText += '＼'}}}
 
   function tell() {}
-
-  function both() {}
+    fetch(text.txt)
+    console.log(fetch(text.txt))
+  function both() {
+    const fs = require("fs");
+    let contents = fs.readFileSync("text.txt")
+    let characters = contents.toString().split("");
+    console.log(characters);
+  }
 
   function decide_action(eve) {
     if (eve.key === "s") {
@@ -42,6 +47,6 @@
     if (eve.key === "Backspace") {
       home()}}
 
-  //home()
+  home()
   document.addEventListener("keyup", decide_action)
 </script>
