@@ -8,6 +8,7 @@
     line-height: 30px;
     word-wrap: anywhere;
     font-family: "Noto Serif SC";
+    display: inline-block
   }
 </style>
 
@@ -27,7 +28,7 @@
 
   function show() {
     document.body.innerText = "take me back [←]\n\n"
-    for (let i = 0; i < 1998; i++) {
+    for (let i = 0; i < 1000; i++) {
       if (Math.random() > 0.5) {
         document.body.innerText += '／'
       } else {
@@ -44,30 +45,31 @@
   function both() {
     
     
-    document.body.innerText = "take me back [←]\n\n"
+    document.body.innerText = "take me back [←]\n\n\n\n\n"
         const letters = content.split('')
-      const width = window.screen.width
       
-    for (let i = 0; i < 200; i += 10) {
+    for (let i = 0; i < letters.length; i += 10) {
       if (Math.random() > 0.5) {
         nn.create('span')
           .content(letters.slice(i, i + 10).join(""))
           .css({
+                  
+          'transform': 'rotate(45deg)',
+          'display': 'inline-block'
           
-            'transform': 'rotate(45deg)'
+
           })
           .addTo('body')
       } else {
         nn.create('span')
           .content(letters.slice(i, i + 10).join(""))
           .css({
-            'transform': 'rotate(-45deg)'
+            'transform': 'rotate(-45deg)',
+          'display': 'inline-block'
           })
           .addTo('body')
 
       }
-
-
     }
   }
 
