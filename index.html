@@ -14,7 +14,8 @@
 </body>
 
 <script>
-  
+  import require from 'fs'
+
   function home() {
     document.body.innerText = "teach me [T]\n\n show me [S]\n\n why not both? [B]\n\n"}
   
@@ -30,8 +31,8 @@
     console.log(fetch("text.txt"))
   function both() {
     const fs = require("fs");
-    let contents = fs.readFileSync("text.txt")
-    let characters = contents.toString().split("");
+    const contents = fs.readFileSync("text.txt")
+    const characters = contents.toString().split("");
     console.log(characters);
   }
 
